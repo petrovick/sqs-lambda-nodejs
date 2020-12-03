@@ -5,9 +5,10 @@ module.exports =  class DocumentValidatorInteractor {
   }
 
   execute = async (event) => {
-    console.log('Recebe o event aqui Mensagem nova rapá')
-    console.log(event)
-    console.log('Recebe o event aqui 222  Mensagem nova rapá')
-    this.presenter.show(event)
+    const response = {
+      message: JSON.parse(event.Records[0].body),
+      event
+    }
+    this.presenter.show(response)
   }
 }
