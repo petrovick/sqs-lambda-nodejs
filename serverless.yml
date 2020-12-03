@@ -58,7 +58,7 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
+  document-validation:
     handler: src/infra/http/routes/document.validator
     description: Function to test class lesson
     timeout: 30
